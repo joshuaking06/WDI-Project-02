@@ -71,18 +71,6 @@ class App extends React.Component {
     this.getRelatedMovies(imdbID)
   }
 
-  // getTweets(movieName){
-  //   axios(
-  //     {
-  //       method: 'GET',
-  //       url: `http://localhost:3000/?movie=${movieName}`,
-  //       headers: {
-  //         'x-requested-with': '',
-  //         'Access-Control-Allow-Origin': '*'
-  //       }
-  //     }
-  //   ).then(res => this.setState({tweets: res.data}))
-  // }
 
   getId(id){
     axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=adfdea606b119c5d76189ff434738475`)
