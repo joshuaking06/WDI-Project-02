@@ -6,7 +6,7 @@ import 'bulma'
 import './style.scss'
 
 const apiKey = '&apikey=6116c432'
-const baseUrl = 'http://www.omdbapi.com/'
+const baseUrl = 'https://www.omdbapi.com/'
 
 import DisplayTime from './components/DisplayTime'
 import DisplayMoviesWatched from './components/DisplayMoviesWatched'
@@ -71,21 +71,21 @@ class App extends React.Component {
     this.getRelatedMovies(imdbID)
   }
 
-  getTweets(movieName){
-    axios(
-      {
-        method: 'GET',
-        url: `http://localhost:3000/?movie=${movieName}`,
-        headers: {
-          'x-requested-with': '',
-          'Access-Control-Allow-Origin': '*'
-        }
-      }
-    ).then(res => this.setState({tweets: res.data}))
-  }
+  // getTweets(movieName){
+  //   axios(
+  //     {
+  //       method: 'GET',
+  //       url: `http://localhost:3000/?movie=${movieName}`,
+  //       headers: {
+  //         'x-requested-with': '',
+  //         'Access-Control-Allow-Origin': '*'
+  //       }
+  //     }
+  //   ).then(res => this.setState({tweets: res.data}))
+  // }
 
   getId(id){
-    axios.get(`http://api.themoviedb.org/3/movie/${id}?api_key=adfdea606b119c5d76189ff434738475`)
+    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=adfdea606b119c5d76189ff434738475`)
       .then(res => this.getMovie(res.data.imdb_id))
   }
 
