@@ -13,7 +13,6 @@ import DisplayMoviesWatched from './components/DisplayMoviesWatched'
 import MovieCard from './components/MovieCard'
 import SearchBar from './components/SearchBar.js'
 import RecommendedMovies from './components/RecommendedMovies.js'
-import DisplayTweets from './components/DisplayTweets.js'
 
 class App extends React.Component {
   constructor(){
@@ -23,7 +22,6 @@ class App extends React.Component {
       searchText: '',
       timeWatched: 0,
       moviesWatched: [],
-      tweets: []
     }
     this.run = true
     this.handleChange = this.handleChange.bind(this)
@@ -67,7 +65,6 @@ class App extends React.Component {
       })
     const movieName = e.currentTarget.firstElementChild.innerHTML.replace(' ', '')
     console.log(movieName)
-    this.getTweets(movieName)
     this.getRelatedMovies(imdbID)
   }
 
