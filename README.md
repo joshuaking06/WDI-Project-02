@@ -38,7 +38,7 @@ React Movie Library is a front-end web application which provides a movie recomm
 
 ## Process
 
-###Planning
+### Planning
 For this project we decided to use the OMDB API to provide us with the data needed to run our application. We also made plans to use the Twitter API, to provide recent tweets on the side of the page about the most recently viewed movies by the user.
 
 ### Separating the Workload
@@ -120,7 +120,7 @@ To add movies to the database, I then has to retreive the imdb ID again and pass
 
 
 
-##Conclusion and Thoughts for Future
+## Conclusion and Thoughts for Future
 Although we had many struggles during the day and a half we worked on this project, it was a very valuable learning experience in the end. It also forced us to come up with solutions on the fly (due to misunderstandings with the API), and was very helpful in teaching me how one can connect 2 or more APIs together in interesting ways. The fact that this was also a one page application made state management tricky at times. 
 
 There are several things I would certainly change if I were to redo this project, and I just might. First being I would not use 2 different APIs of course, and I would simply use themoviedb.org API for the entire project. I would also take some time to work on the styling because I feel it could use a lot in that department.
