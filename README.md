@@ -93,7 +93,7 @@ So we found a way to link both of the APIs together in a way that, while not ver
 ```
   getRelatedMovies(id){
     axios
-      .get(`https://api.themoviedb.org/3/find/${id}?api_key=adfdea606b119c5d76189ff434738475&external_source=imdb_id`)
+      .get(`https://api.themoviedb.org/3/find/${id}?api_key=apikey&external_source=imdb_id`)
         .then(res => this.makeRecommendedRequest(res.data.movie_results[0].id))
   }
 ```
@@ -102,7 +102,7 @@ First I took the imdb from e.target(given from the first API) and made an axios 
 
 ```
   makeRecommendedRequest(id){
-    axios.get(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=adfdea606b119c5d76189ff434738475`)
+    axios.get(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=apikey`)
       .then(res => this.setState({ relatedMovies: res.data.results}))
   }
 ```
@@ -111,7 +111,7 @@ This function used the database ID to make a new request for the movie show rout
 
 ```
 getId(id){
-    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=adfdea606b119c5d76189ff434738475`)
+    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=apikey`)
       .then(res => this.getMovie(res.data.imdb_id))
   }
 ```
